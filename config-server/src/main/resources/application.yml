@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhongjibing/spring-cloud-config.git
+          search-paths: repos
+        native:
+          search-locations: classpath:repos/
+        jdbc:
+          sql: SELECT `key`, `value` FROM properties WHERE application = ? AND PROFILE = ? AND label = ?
+      label: master
+  profiles:
+    active: git
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
