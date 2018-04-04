@@ -15,7 +15,7 @@ spring:
           sql: SELECT `key`, `value` FROM properties WHERE application = ? AND PROFILE = ? AND label = ?
       label: master
   profiles:
-    active: git
+    active: native
 eureka:
   client:
     serviceUrl:

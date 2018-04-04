@@ -14,6 +14,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
+  zipkin:
+    base-url: http://localhost:9411
 eureka:
   client:
     serviceUrl:
@@ -21,4 +23,3 @@ eureka:
 management:
   security:
     enabled: false
-
