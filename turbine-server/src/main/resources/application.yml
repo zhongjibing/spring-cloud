@@ -14,3 +14,7 @@ turbine:
     clusterConfig: default
   appConfig: service-hi,service-ribbon,service-feign,config-client
   clusterNameExpression: new String("default")
+
+management:
+  security:
+    enabled: false

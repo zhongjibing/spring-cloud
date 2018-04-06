@@ -18,3 +18,7 @@ spring:
 #        health-check-path: /health
 #        health-check-interval: 10s
 #        instance-id: ${spring.application.name}
+
+management:
+  security:
+    enabled: false
